@@ -28,6 +28,14 @@ export const metadata: Metadata = {
       "Современный падел корт, онлайн-бронирование, расписание и тренерскими программами для игроков любого уровня.",
     type: "website",
     locale: "ru_RU",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Padel Yugra — Падел корт в Югорске",
+      },
+    ],
   },
   alternates: {
     canonical: "/",
