@@ -94,6 +94,27 @@ export const blogPosts = [
   },
 ];
 
+export const newsItems = [
+  {
+    slug: "new-court-opening",
+    title: "Открытие нового корта",
+    excerpt: "Рады сообщить об открытии второго корта в нашем клубе.",
+    date: "2024-12-20",
+  },
+  {
+    slug: "winter-tournament-announcement",
+    title: "Анонс зимнего турнира",
+    excerpt: "Регистрация на зимний турнир открыта. Призы и награды ждут победителей.",
+    date: "2024-12-18",
+  },
+  {
+    slug: "coach-workshop",
+    title: "Мастер-класс от профессионального тренера",
+    excerpt: "Приглашаем на мастер-класс по технике игры в падел.",
+    date: "2024-12-12",
+  },
+];
+
 export const tournaments = [
   {
     id: "winter-cup-2025",

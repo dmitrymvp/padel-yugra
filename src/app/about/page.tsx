@@ -72,7 +72,6 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 space-y-2 p-5">
                   <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                  <p className="text-xs text-white/70">{item.description}</p>
                 </div>
               </article>
             ))}

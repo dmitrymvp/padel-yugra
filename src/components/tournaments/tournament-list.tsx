@@ -5,14 +5,19 @@ import Link from "next/link";
 type Tournament = {
   id: string;
   name: string;
-  level: string;
   date: string;
   time: string;
   entryFee: string;
   status: string;
   description: string;
-  type: "upcoming" | "past";
+  type: string;
   result?: string;
+  location?: string;
+  maxTeams?: number;
+  contactPhone?: string;
+  contactEmail?: string;
+  standings?: any[];
+  matches?: any[];
 };
 
 type TournamentListProps = {

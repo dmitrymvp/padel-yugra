@@ -19,8 +19,6 @@ export default function NewsPage() {
           >
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50">
-                <span>{item.category}</span>
-                <span className="h-px w-6 bg-white/15" aria-hidden />
                 <time dateTime={item.date}>{formatDate(item.date)}</time>
               </div>
               <h3 className="text-xl font-semibold text-white">

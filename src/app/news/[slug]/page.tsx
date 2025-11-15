@@ -28,8 +28,6 @@ export default function NewsArticlePage({ params }: NewsPageProps) {
           ← все новости
         </Link>
         <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-white/50">
-          <span>{article.category}</span>
-          <span className="h-px w-6 bg-white/15" aria-hidden />
           <time dateTime={article.date}>{formatDate(article.date)}</time>
         </div>
         <h1 className="text-4xl font-semibold text-white">{article.title}</h1>
