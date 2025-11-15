@@ -51,17 +51,17 @@ export function SiteFooter() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "07:00",
-        closes: "23:00",
+        opens: "08:00",
+        closes: "22:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Saturday", "Sunday"],
         opens: "08:00",
-        closes: "01:00",
+        closes: "23:00",
       },
     ],
-    url: "https://padelyugra.ru",
+    url: "https://padel-yugra.vercel.app",
     sameAs: socialLinks.map((link) => link.href),
   };
 

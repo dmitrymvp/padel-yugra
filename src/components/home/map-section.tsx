@@ -17,7 +17,7 @@ export function MapSection() {
                 height="420"
                 frameBorder="0"
                 className="hidden h-[420px] w-full lg:block"
-                title="Карта Padel Prime Court"
+                title="Карта Padel YUGRA"
                 loading="lazy"
               />
               <iframe
@@ -26,7 +26,7 @@ export function MapSection() {
                 height="380"
                 frameBorder="0"
                 className="h-[380px] w-full lg:hidden"
-                title="Карта Padel Prime Court"
+                title="Карта Padel YUGRA"
                 loading="lazy"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-950/50 via-slate-950/30 to-transparent mix-blend-overlay" />
