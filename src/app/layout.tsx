@@ -18,14 +18,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Padel Prime Court — Премиальный падел клуб",
+  title: "Padel Yugra — Корт для падела в Югорске",
   description:
-    "Падел клуб с современными кортами, онлайн-бронированием, расписанием и тренерскими программами.",
-  metadataBase: new URL("https://padel-prime.local"),
+    "Современный падел корт, онлайн-бронирование, расписание и тренерскими программами для игроков любого уровня.",
+  metadataBase: new URL("https://padel-yugra.vercel.app"),
   openGraph: {
-    title: "Padel Prime Court",
+    title: "Padel Yugra",
     description:
-      "Премиальный падел клуб с онлайн-бронированием, расписанием и тренерами.",
+      "Современный падел корт, онлайн-бронирование, расписание и тренерскими программами для игроков любого уровня.",
     type: "website",
     locale: "ru_RU",
   },
