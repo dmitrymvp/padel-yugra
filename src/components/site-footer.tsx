@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks } from "./site-header";
+import { navLinks } from "@/lib/nav-links";
 
 const socialLinks = [
   {
@@ -72,40 +72,46 @@ export function SiteFooter() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <footer className="border-t border-white/10 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-6 py-12">
-          <div className="flex justify-between gap-8 md:grid-cols-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 lg:gap-8">
+            {/* Социальные сети */}
             <div className="space-y-4">
-              
-              <div className="flex flex-col gap-4">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-white">
+                Мы в соцсетях
+              </h3>
+              <div className="flex flex-col gap-3 sm:gap-4">
                 {socialLinks.map((social) => (
-                  <div key={social.name} className="flex items-center gap-2 transition hover:border-lime-300/50 hover:text-lime-200">
-                    <a href={social.href} target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.name}
-                      className="flex items-center gap-2 transition hover:border-lime-300/50 hover:text-lime-200">
-                      <span
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition  hover:text-lime-200"
-                        >
-                          {social.icon}
-                      </span>
-                      <span className="text-sm transition hover:border-lime-300/50 hover:text-lime-200">{social.name}</span>
-                    </a>
-                  </div>
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="flex items-center gap-3 transition hover:text-lime-200 group"
+                  >
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition group-hover:border-lime-300/50 group-hover:text-lime-200">
+                      {social.icon}
+                    </span>
+                    <span className="text-sm text-white/80 transition group-hover:text-lime-200">
+                      {social.name}
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>
 
+            {/* Навигация */}
             <div className="space-y-4">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-white">
                 Навигация
               </h3>
               <nav>
-                <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-white/60 sm:grid-cols-3">
+                <ul className="grid grid-cols-1 gap-2 text-sm text-white/60">
                   {navLinks.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="transition hover:text-white"
+                        className="transition hover:text-white block py-1"
                       >
                         {link.label}
                       </Link>
@@ -115,24 +121,25 @@ export function SiteFooter() {
               </nav>
             </div>
 
-            <div className="space-y-4">
+            {/* Контакты */}
+            <div className="space-y-4 sm:col-span-2 lg:col-span-1">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-white">
                 Контакты
               </h3>
-              <address className="not-italic text-sm text-white/60">
-                <p className="mb-2">
-                  <span className="block text-white/80">Адрес:</span>
+              <address className="not-italic text-sm text-white/60 space-y-3">
+                <p>
+                  <span className="block text-white/80 mb-1">Адрес:</span>
                   <a
                     href="https://yandex.ru/maps/?text=Югорск,+ул.+Остравская+1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition hover:text-lime-200"
+                    className="transition hover:text-lime-200 break-words"
                   >
                     Югорск, ул. Остравская, 1
                   </a>
                 </p>
-                <p className="mb-2">
-                  <span className="block text-white/80">Телефон:</span>
+                <p>
+                  <span className="block text-white/80 mb-1">Телефон:</span>
                   <a
                     href="tel:+79999999999"
                     className="transition hover:text-lime-200"
@@ -141,25 +148,24 @@ export function SiteFooter() {
                   </a>
                 </p>
                 <p>
-                  <span className="block text-white/80">Email:</span>
+                  <span className="block text-white/80 mb-1">Email:</span>
                   <a
                     href="mailto:padel-yugra@yandex.ru"
-                    className="transition hover:text-lime-200"
+                    className="transition hover:text-lime-200 break-all"
                   >
                     padel-yugra@yandex.ru
                   </a>
                 </p>
               </address>
             </div>
-            
           </div>
 
-          <div className="mt-12 border-t border-white/10 pt-6">
-            <div className="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
-              <p>
+          <div className="mt-8 sm:mt-12 border-t border-white/10 pt-6">
+            <div className="flex flex-col items-center justify-center gap-3 text-xs text-white/40 sm:flex-row sm:justify-between">
+              <p className="text-center sm:text-left">
                 © {currentYear} PADEL YUGRA. Все права защищены.
               </p>
-              <p>
+              <p className="text-center sm:text-right">
                 Разработка сайта —{" "}
                 <a
                   href="https://m.vk.com/masqueunclub17"

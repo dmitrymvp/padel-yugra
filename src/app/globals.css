@@ -45,10 +45,58 @@ button {
   font-family: inherit;
 }
 
+/* Кастомный скроллбар */
 .custom-scrollbar {
-  overflow: auto;  
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  scrollbar-width: thin;
+  scrollbar-color: #bef264 rgba(15, 23, 42, 0.9);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 12px;
+  margin: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(190, 242, 100, 0.8) 0%,
+    rgba(190, 242, 100, 0.6) 100%
+  );
+  border-radius: 12px;
+  border: 2px solid rgba(15, 23, 42, 0.9);
+  transition: all 0.2s ease;
+  min-height: 40px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(190, 242, 100, 1) 0%,
+    rgba(190, 242, 100, 0.8) 100%
+  );
+  border-color: rgba(15, 23, 42, 1);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(190, 242, 100, 0.9);
+}
+
+/* Блюр контента при открытом мобильном меню */
+body.menu-open > div > main {
+  filter: blur(8px);
+  transition: filter 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+body.menu-open > div > footer {
+  filter: blur(8px);
+  transition: filter 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 

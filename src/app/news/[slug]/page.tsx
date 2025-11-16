@@ -8,11 +8,12 @@ export function generateStaticParams() {
 }
 
 type NewsPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function NewsArticlePage({ params }: NewsPageProps) {
-  const article = newsItems.find((item) => item.slug === params.slug);
+export default async function NewsArticlePage({ params }: NewsPageProps) {
+  const { slug } = await params;
+  const article = newsItems.find((item) => item.slug === slug);
 
   if (!article) {
     return notFound();

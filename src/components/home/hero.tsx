@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden  rounded-3xl border border-white/10 bg-slate-950/60 shadow-[0_0_60px_rgba(15,23,42,0.65)]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(190,242,100,0.25),transparent_55%)]" />
-      <div className="relative h-[600] grid gap-12 px-8 py-16 sm:px-16 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+      <div className="relative h=[600] grid gap-12 px-8 py-16 sm:px-16 lg:grid-cols-[1.2fr_1fr] lg:items-center">
         <div className="space-y-6">
      
           <h1 className="text-4xl font-semibold sm:text-5xl">
@@ -28,7 +28,7 @@ export function Hero() {
           
         </div>
         <div className="relative flex h-full items-center">
-          <div className="relative mx-auto hidden h-full max-w-sm rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-[0_35px_80px_rgba(56,189,248,0.15)] sm:flex">
+          <div className="relative mx-auto hidden h-full max-w-sm rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-[0_35px_80px_rgba(56,189,248,0.15)] lg:flex">
             <div className="flex h-full w-full flex-col justify-between rounded-3xl bg-black/30 p-6">
               <div className="space-y-4">
                 <p className="text-xs uppercase tracking-[0.6em] text-lime-200/80">

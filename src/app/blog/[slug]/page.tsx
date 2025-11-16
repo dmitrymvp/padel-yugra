@@ -8,11 +8,12 @@ export function generateStaticParams() {
 }
 
 type BlogPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function BlogArticlePage({ params }: BlogPageProps) {
-  const post = blogPosts.find((article) => article.slug === params.slug);
+export default async function BlogArticlePage({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const post = blogPosts.find((article) => article.slug === slug);
 
   if (!post) {
     return notFound();

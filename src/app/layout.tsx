@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import ogImage from '../../public/og.png'
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     images: [
       {
-        url: "/og-image.jpg",
+        url: ogImage.src,
         width: 1200,
         height: 630,
         alt: "Padel Yugra — Падел корт в Югорске",
