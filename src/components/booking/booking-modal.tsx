@@ -157,7 +157,7 @@ export function BookingModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl rounded-3xl border border-white/10 bg-slate-950 p-8 shadow-2xl"
+        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl border border-white/10 bg-slate-950 p-8 pr-6 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button

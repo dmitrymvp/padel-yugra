@@ -44,3 +44,18 @@ h1,
 button {
   font-family: inherit;
 }
+
+.custom-scrollbar {
+  overflow: auto;  
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+
+
+
+
+
+
+
+
